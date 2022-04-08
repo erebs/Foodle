@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/purple_500"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:padding="12dp"
+        android:onClick="goBack"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/purple_700" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hello !"
+            android:textColor="@color/purple_700"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Enter Your Informations below\nto Join our Family"
+            android:textColor="@color/purple_700"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/name_reg"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:textStyle="bold"
+            android:background="@drawable/input"
+            android:gravity="center|left"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:hint="Enter your Full name"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/purple_700"
+            android:textColorHint="#80034670"
+            android:drawableTint="@color/purple_700"
+            android:textSize="10dp" />
+
+
+        <EditText
+            android:id="@+id/phone_reg"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:textStyle="bold"
+            android:background="@drawable/input"
+            android:gravity="center|left"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:hint="Enter your Mobile Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/purple_700"
+            android:textColorHint="#80034670"
+            android:drawableTint="@color/purple_700"
+            android:textSize="10dp" />
+
+        <EditText
+            android:id="@+id/email_reg"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input"
+            android:gravity="center|left"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+            android:hint="Enter your Email ID"
+            android:inputType="textEmailAddress"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:textColor="@color/purple_700"
+            android:textColorHint="#80034670"
+            android:drawableTint="@color/purple_700"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="-5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:onClick="ForgotBtn"
+            android:padding="5dp"
+            android:text="Forgot Password ?"
+            android:textColor="@color/purple_700"
+            android:textSize="10dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="36dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="regBtn"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/LoginLoader"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:visibility="gone"
+                app:shimmer_colored="true"
+                app:shimmer_highlight_color="@color/purple_500"
+                app:shimmer_intensity=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.98">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?colorAccent"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="goBack"
+            android:textSize="13dp"
+            android:text="@string/to_signin"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

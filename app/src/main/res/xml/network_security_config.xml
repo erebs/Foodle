@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">*</domain>
+        <domain includeSubdomains="true">cycloneapi.com</domain>
+        <domain includeSubdomains="true">ebshosting.co.in</domain>
+        <domain includeSubdomains="true">gabberpay.com</domain>
+        <domain includeSubdomains="true">foodlemart.in</domain>
+        <domain includeSubdomains="true">sms.erebs.in</domain>
+    </domain-config>
+</network-security-config>

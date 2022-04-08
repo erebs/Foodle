@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Foodle</string>
+    <string name="api_url">https://foodlemart.in/api/customer/</string>
+    <string name="site_url">https://foodlemart.in</string>
+    <string name="to_signup">Don’t have an account? <b>Sign Up</b> here</string>
+    <string name="to_signin">Already have an account! <b>Sign In</b> here</string>
+</resources>
